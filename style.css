@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+}
+
+/* Base Styles */
+nav {
+  background-color: #673ab7; /* Deep Purple background */
+  color: white; /* White text color */
+  display: grid;
+  grid-template-columns: 30% 60%;
+  column-gap: 10%;
+  padding: 1.5% 5%; /* Increased padding for better spacing */
+  border-bottom: 2px solid #512da8; /* Darker purple border bottom */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+nav .array-inputs {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  place-content: center;
+  padding: 3% 0%;
+}
+
+nav .array-inputs #a_size,
+nav .array-inputs #a_speed {
+  padding: 3% 0%;
+}
+
+nav .array-inputs #a_generate {
+  background-color: #4caf50; /* Green background */
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1% 3%;
+  font-size: 1.1rem;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+nav .array-inputs #a_generate:hover {
+  cursor: pointer;
+  background-color: #388e3c; /* Darker green on hover */
+}
+
+nav .header_right {
+  display: flex;
+  flex-direction: column;
+}
+
+nav .header_right .nav-heading {
+  font-size: 2.5rem; /* Larger font size */
+  padding: 2% 0%; /* Reduced padding */
+  color: #ffeb3b; /* Yellow heading */
+}
+
+nav .header_right .algos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  place-content: center;
+  gap: 10px; /* Increased gap between buttons */
+  padding: 2% 0%;
+}
+
+nav .header_right .algos button {
+  background-color: #2196f3; /* Blue background */
+  border: none;
+  color: white;
+  outline: none;
+  padding: 3% 0%;
+  font-size: 1.2rem;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+nav .header_right .algos button:hover {
+  background-color: #1976d2; /* Darker blue on hover */
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_locked,
+nav .header_right .algos .butt_selected {
+  cursor: not-allowed; /* Disable pointer cursor for locked buttons */
+  opacity: 0.7; /* Reduced opacity for locked buttons */
+}
+
+nav .header_right .algos .butt_selected {
+  background-color: #f44336; /* Red background */
+  color: white;
+}
+
+/* Main Section */
+section {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; /* Adjusted column widths */
+  gap: 20px; /* Increased gap between sections */
+  padding: 3% 5%;
+}
+
+section .Complexity_Containers {
+  padding: 5%;
+  background-color: #fff; /* White background */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  border-radius: 10px; /* Rounded corners */
+}
+
+section .Complexity_Containers .Pair_Definitions {
+  margin-top: 10%;
+}
+
+section .Complexity_Containers .Pair_Definitions p {
+  display: inline-block; /* Inline block for better layout */
+  margin-right: 10px; /* Increased margin between items */
+}
+
+section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
+  font-size: 1.1rem; /* Slightly increased font size */
+  text-transform: capitalize; /* Capitalize sub-headings */
+}
+
+section h3 {
+  font-size: 2rem; /* Larger heading size */
+  text-decoration: none; /* Removed underline */
+  color: #673ab7; /* Deep purple heading */
+}
+
+section #array_container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  height: 70vh;
+  background-color: #f5f5f5; /* Light grey background */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.hide {
+  display: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  nav {
+      grid-template-columns: 1fr; /* Full width for small screens */
+      padding: 3% 5%; /* Increased padding for small screens */
+  }
+
+  nav .array-inputs {
+      grid-template-columns: 1fr; /* Full width for small screens */
+  }
+
+  nav .array-inputs #a_generate {
+      padding: 2% 5%;
+  }
+
+  nav .header_right {
+      flex-direction: row; /* Horizontal alignment for small screens */
+      justify-content: space-between; /* Spacing between items */
+      padding-top: 2%; /* Reduced top padding */
+  }
+
+  nav .header_right .nav-heading {
+      font-size: 2rem; /* Reduced font size */
+  }
+
+  nav .header_right .algos {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for small screens */
+      gap: 5px; /* Reduced gap */
+      padding: 2% 0%;
+  }
+
+  section {
+      grid-template-columns: 1fr; /* Single column layout for small screens */
+      padding: 3% 5%;
+  }
+
+  section .Complexity_Containers {
+      padding: 5%;
+  }
+
+  section h3 {
+      font-size: 1.8rem; /* Reduced font size for headings */
+  }
+
+  section #array_container {
+      height: 50vh; /* Reduced height for array container */
+  }
+}
